@@ -55,6 +55,9 @@ class InteractiveRecord
   end
 
   def self.find_by(arg)
+    if arg == String
+      binding.pry
+
   end
 
 end
