@@ -60,7 +60,7 @@ class InteractiveRecord
     if arg == String
       binding.pry
     end
-    
+
 
   end
 
