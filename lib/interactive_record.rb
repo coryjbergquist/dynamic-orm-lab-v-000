@@ -54,4 +54,8 @@ def self.find_by_name(name)
   DB[:conn].execute(sql)
 end
 
+def find_by(arg)
+  binding.pry
+end
+
 end
