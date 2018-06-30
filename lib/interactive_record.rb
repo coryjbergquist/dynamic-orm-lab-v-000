@@ -57,7 +57,7 @@ class InteractiveRecord
   def self.find_by(arg)
     if arg.values[0].is_a? String
       self.find_by_name
-    elsif arg.values[0].is_a? 
+    elsif arg.values[0].is_a?
       binding.pry
     end
 
