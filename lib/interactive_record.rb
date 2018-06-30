@@ -54,13 +54,18 @@ class InteractiveRecord
     DB[:conn].execute(sql)
   end
 
+  def self.find_by_grade(grade)
+    sql = "SELECT * FROM #{self.table_name} WHERE grade = '#{grade}'"
+    DB[:conn].execute(sql)
+  end
+
   def self.find_by(arg)
     binding.pry
 
     if arg.values[0].is_a? String
-      self.find_by_name
-    elsif arg.values[0].is_a?
-      binding.pry
+      self.find_by_name(arg.values[0])
+    elsif arg.values[0].is_a? Integer
+      
     end
 
 
